@@ -5,7 +5,8 @@ export function activate(context: vscode.ExtensionContext) {
   // コマンド "copyMarkdown.copyMarkdown" を登録
   let disposable = vscode.commands.registerCommand('copyMarkdown.copyMarkdown', async (uri: vscode.Uri) => {
     if (!uri) {
-      vscode.window.showErrorMessage('ファイルが選択されていません。');
+      vscode.window.showErrorMessage('No file is selected.');
+
       return;
     }
 
@@ -33,9 +34,10 @@ export function activate(context: vscode.ExtensionContext) {
 
       // クリップボードへコピー
       await vscode.env.clipboard.writeText(markdown);
-      vscode.window.showInformationMessage('Markdown がクリップボードにコピーされました！');
+      vscode.window.showInformationMessage('Markdown copied to clipboard!');
     } catch (error) {
-      vscode.window.showErrorMessage(`Markdown のコピー中にエラーが発生しました: ${error}`);
+      // lang:en
+      vscode.window.showErrorMessage(`An error occurred while copying Markdown: ${error}`);
     }
   });
 
