@@ -1,0 +1,46 @@
+{
+    "name": "copy-markdown",
+    "displayName": "Copy Markdown",
+    "description": "右クリックメニューからファイルを Markdown 形式でクリップボードにコピーする拡張機能",
+    "version": "0.0.1",
+    "publisher": "your-name",
+    "engines": {
+      "vscode": "^1.70.0"
+    },
+    "categories": [
+      "Other"
+    ],
+    "activationEvents": [
+      "onCommand:copyMarkdown.copyMarkdown"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+      "commands": [
+        {
+          "command": "copyMarkdown.copyMarkdown",
+          "title": "Copy Markdown"
+        }
+      ],
+      "menus": {
+        "explorer/context": [
+          {
+            "command": "copyMarkdown.copyMarkdown",
+            "when": "resourceFilename =~ /.+/",
+            "group": "navigation"
+          }
+        ]
+      }
+    },
+    "scripts": {
+      "vscode:package": "npx vsce package",
+      "vscode:publish": "npx vsce publish",
+      "vscode:prepublish": "npm run compile",
+      "compile": "tsc -p ./"
+    },
+    "devDependencies": {
+      "typescript": "^4.0.0",
+      "vscode": "^1.1.37",
+      "@types/node": "^14.0.0"
+    }
+  }
+  
