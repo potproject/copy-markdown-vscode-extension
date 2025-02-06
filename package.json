@@ -1,9 +1,14 @@
 {
     "name": "copy-markdown",
     "displayName": "Copy Markdown",
-    "description": "右クリックメニューからファイルを Markdown 形式でクリップボードにコピーする拡張機能",
+    "description": "An extension that copies files to the clipboard in Markdown format from the right-click menu.",
+    "description.ja": "右クリックメニューからファイルを Markdown 形式でクリップボードにコピーする拡張機能",
     "version": "0.0.1",
-    "publisher": "your-name",
+    "publisher": "potproject",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/potproject/copy-markdown-vscode-extension"
+    },
     "engines": {
       "vscode": "^1.70.0"
     },
@@ -32,9 +37,8 @@
       }
     },
     "scripts": {
-      "vscode:package": "npx vsce package",
-      "vscode:publish": "npx vsce publish",
       "vscode:prepublish": "npm run compile",
+      "vscode:package": "npx vsce package",
       "compile": "tsc -p ./"
     },
     "devDependencies": {
