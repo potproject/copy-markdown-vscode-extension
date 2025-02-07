@@ -3,6 +3,7 @@
     "displayName": "Copy Markdown",
     "description": "An extension that copies files to the clipboard in Markdown format from the right-click menu.",
     "description.ja": "右クリックメニューからファイルを Markdown 形式でクリップボードにコピーする拡張機能",
+    "icon": "images/icon.png",
     "version": "0.0.1",
     "publisher": "potproject",
     "repository": {
